@@ -234,13 +234,18 @@
     if(![url isKindOfClass:[NSNull class]]){
         NSURL *imgURL = [NSURL URLWithString:url];
         HTTPRequest *request = [[HTTPRequest alloc] initRequestWithURL:imgURL withCompletionHandler:^(UIImage *image) {
+            
+            FactsItem *item = (FactsItem *)[_factsItem objectAtIndex:indexPath.row];
             if(image != nil){
-                FactsItem *item = (FactsItem *)[_factsItem objectAtIndex:indexPath.row];
+                
                 item.image = image;
                 [imageView setImage:image];
                 
             }else{
-                [imageView setImage:[UIImage imageNamed:@"placeholder1.jpg"]];
+                UIImage *image = [UIImage imageNamed:@"placeholder1"];
+                
+                item.image = image;
+                [imageView setImage:item.image];
             }
             
             imageView.hidden = NO;
