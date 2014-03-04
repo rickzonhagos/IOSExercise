@@ -242,9 +242,9 @@
                 [imageView setImage:image];
                 
             }else{
-                UIImage *image = [UIImage imageNamed:@"placeholder1"];
                 
-                item.image = image;
+                
+                item.image = [UIImage imageNamed:@"placeholder1.jpg"];
                 [imageView setImage:item.image];
             }
             

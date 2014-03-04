@@ -81,8 +81,8 @@
     self.mySelector = nil;
     
     if(self.completionHandler){
-        UIImage *image = [[UIImage alloc] initWithData:_receivedData];
-        self.completionHandler(image);
+        //UIImage *image = [[UIImage alloc] initWithData:_receivedData];
+        self.completionHandler(nil);
     }
 }
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
@@ -106,6 +106,7 @@
         UIImage *image = [[UIImage alloc] initWithData:_receivedData];
         self.completionHandler(image);
     }
+    self.receivedData = [NSMutableData new];
 }
 
 @end
