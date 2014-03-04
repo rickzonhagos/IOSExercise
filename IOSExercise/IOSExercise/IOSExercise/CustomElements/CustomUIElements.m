@@ -29,6 +29,7 @@
 +(UIActivityIndicatorView *) createActivityIndicatorWithFrame : (CGRect) frame {
     UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray ];
     indicator.frame = frame;
+    indicator.hidesWhenStopped = YES;
     [indicator startAnimating];
     
     return indicator;

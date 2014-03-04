@@ -12,6 +12,7 @@
 		1AAA6BFB18C6223000360D03 /* UINavigationController+RotationIn_IOS6.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAA6BF418C6223000360D03 /* UINavigationController+RotationIn_IOS6.m */; };
 		1AAA6BFC18C6223000360D03 /* CustomUIElements.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAA6BF718C6223000360D03 /* CustomUIElements.m */; };
 		1AAA6BFD18C6223000360D03 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAA6BFA18C6223000360D03 /* ViewController.m */; };
+		1AAA6C0018C624B500360D03 /* placeholder1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AAA6BFF18C624B500360D03 /* placeholder1.jpg */; };
 		1AECA1D018C4AE0600DFD25E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AECA1CF18C4AE0600DFD25E /* Foundation.framework */; };
 		1AECA1D218C4AE0600DFD25E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AECA1D118C4AE0600DFD25E /* CoreGraphics.framework */; };
 		1AECA1D418C4AE0600DFD25E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AECA1D318C4AE0600DFD25E /* UIKit.framework */; };
@@ -51,6 +52,7 @@
 		1AAA6BF718C6223000360D03 /* CustomUIElements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUIElements.m; sourceTree = "<group>"; };
 		1AAA6BF918C6223000360D03 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1AAA6BFA18C6223000360D03 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1AAA6BFF18C624B500360D03 /* placeholder1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder1.jpg; sourceTree = "<group>"; };
 		1AECA1CC18C4AE0600DFD25E /* IOSExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AECA1CF18C4AE0600DFD25E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1AECA1D118C4AE0600DFD25E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,6 +129,14 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		1AAA6BFE18C624B500360D03 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				1AAA6BFF18C624B500360D03 /* placeholder1.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		1AECA1C318C4AE0600DFD25E = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +170,7 @@
 		1AECA1D518C4AE0600DFD25E /* IOSExercise */ = {
 			isa = PBXGroup;
 			children = (
+				1AAA6BFE18C624B500360D03 /* images */,
 				1AAA6BF218C6223000360D03 /* Categories */,
 				1AAA6BF518C6223000360D03 /* CustomElements */,
 				1AAA6BF818C6223000360D03 /* View Controllers */,
@@ -306,6 +317,7 @@
 				1AECA1E818C4AE0600DFD25E /* Images.xcassets in Resources */,
 				1AECA1DA18C4AE0600DFD25E /* InfoPlist.strings in Resources */,
 				1AECA1E318C4AE0600DFD25E /* Main.storyboard in Resources */,
+				1AAA6C0018C624B500360D03 /* placeholder1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

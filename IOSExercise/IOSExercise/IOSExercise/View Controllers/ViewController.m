@@ -234,17 +234,20 @@
     if(![url isKindOfClass:[NSNull class]]){
         NSURL *imgURL = [NSURL URLWithString:url];
         HTTPRequest *request = [[HTTPRequest alloc] initRequestWithURL:imgURL withCompletionHandler:^(UIImage *image) {
+            if(image != nil){
+                FactsItem *item = (FactsItem *)[_factsItem objectAtIndex:indexPath.row];
+                item.image = image;
+                [imageView setImage:image];
+                
+            }else{
+                [imageView setImage:[UIImage imageNamed:@"placeholder1.jpg"]];
+            }
             
-            FactsItem *item = (FactsItem *)[_factsItem objectAtIndex:indexPath.row];
-            item.image = image;
-            
-            [imageView setImage:image];
             imageView.hidden = NO;
             if([indicator isAnimating]){
                 [indicator stopAnimating];
             }
             indicator.hidden = YES;
-            
             
         }];
     }

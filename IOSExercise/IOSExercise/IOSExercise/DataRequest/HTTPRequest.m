@@ -33,7 +33,7 @@
     self = [super init];
     if(self){
         self.myURL = url;
-        self.myRequest = [NSURLRequest requestWithURL:self.myURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+        self.myRequest = [NSURLRequest requestWithURL:self.myURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
         self.myConnection = [[NSURLConnection alloc] initWithRequest:self.myRequest delegate:self];
         self.myReturnType = returnType;
         self.myTarget = target;
@@ -47,7 +47,7 @@
     self = [super init];
     if(self){
         self.myURL = url;
-        self.myRequest = [NSURLRequest requestWithURL:self.myURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+        self.myRequest = [NSURLRequest requestWithURL:self.myURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
         self.myConnection = [[NSURLConnection alloc] initWithRequest:self.myRequest delegate:self];
         self.completionHandler = completionHandler;
         self.receivedData = [NSMutableData new];
@@ -79,6 +79,11 @@
     self.myReturnType = nil;
     self.myTarget = nil;
     self.mySelector = nil;
+    
+    if(self.completionHandler){
+        UIImage *image = [[UIImage alloc] initWithData:_receivedData];
+        self.completionHandler(image);
+    }
 }
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
     id data = nil;
